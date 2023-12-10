@@ -4,33 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Team {
-    private String teamID;
     private String name;
-    private List<Member> members;
-    private Project assignedProject;
-    private Member leader;
-    private List<Machine> machinesUsed;
+    private String membersNames; //csv
+    private String assignedProjectName;
+//    private Project assignedProject;
+    private String leaderName;
+    private String machinesUsedNames; //csv
 
     // Constructors
 
-    public Team(String teamID, String name, Project assignedProject, Member leader) {
-        this.teamID = teamID;
+    public Team(String name, String assignedProjectName, String leaderName,String members,String machinesUsedNames) {
         this.name = name;
-        this.members = new ArrayList<>();
-        this.assignedProject = assignedProject;
-        this.leader = leader;
-        this.machinesUsed = new ArrayList<>();
+        this.membersNames = members;
+        this.assignedProjectName = assignedProjectName;
+        this.leaderName = leaderName;
+        this.machinesUsedNames = machinesUsedNames;
     }
 
     // Getters and Setters
-
-    public String getTeamID() {
-        return teamID;
-    }
-
-    public void setTeamID(String teamID) {
-        this.teamID = teamID;
-    }
 
     public String getName() {
         return name;
@@ -40,36 +31,36 @@ public class Team {
         this.name = name;
     }
 
-    public List<Member> getMembers() {
-        return members;
+    public String getMembers() {
+        return membersNames;
     }
 
-    public void setMembers(List<Member> members) {
-        this.members = members;
+    public void setMembers(String members) {
+        this.membersNames = members;
     }
 
-    public Project getAssignedProject() {
-        return assignedProject;
+    public String getAssignedProjectName() {
+        return assignedProjectName;
     }
 
-    public void setAssignedProject(Project assignedProject) {
-        this.assignedProject = assignedProject;
+    public void setAssignedProject(String assignedProject) {
+        this.assignedProjectName = assignedProject;
     }
 
-    public Member getLeader() {
-        return leader;
+    public String getLeaderName() {
+        return this.leaderName;
     }
 
-    public void setLeader(Member leader) {
-        this.leader = leader;
+    public void setLeaderName(String leader) {
+        this.leaderName = leader;
     }
 
-    public List<Machine> getMachinesUsed() {
-        return machinesUsed;
+    public String getMachinesUsedNames() {
+        return machinesUsedNames;
     }
 
-    public void setMachinesUsed(List<Machine> machinesUsed) {
-        this.machinesUsed = machinesUsed;
+    public void setMachinesUsedNames(String machinesUsedNames) {
+        this.machinesUsedNames = machinesUsedNames;
     }
 
     // Team methods

@@ -46,4 +46,8 @@ public class AdminPage {
         Stage stage=(Stage) members.getScene().getWindow();
         changeScene(stage,"AdminMembersPage.fxml","Settings");
     }
+    public void teamsPage(ActionEvent event) throws IOException{
+        Stage stage=(Stage) teams.getScene().getWindow();
+        changeScene(stage,"AdminTeamPage.fxml","Teams Page");
+    }
 }

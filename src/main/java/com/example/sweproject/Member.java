@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Member extends User{
     private ArrayList<Team> teamsInvolved;
     private ArrayList<Project> projectInvolved;
-    private String researchInterests;
+    private String researchInterests; // csv "aaa,s,sd,s,sd"
     public Member(String username, String password, String role,String researchInterest) {
         super(username, password, role);
         projectInvolved=new ArrayList<>();
