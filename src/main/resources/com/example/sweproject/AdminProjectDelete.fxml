@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminProjectDeleteController">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="471.0" prefWidth="227.0" style="-fx-background-color: #8EFFA8;">
+         <children>
+            <Pane prefHeight="143.0" prefWidth="215.0">
+               <children>
+                  <ImageView fitHeight="110.0" fitWidth="125.0" layoutX="55.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/logo%201.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="teams" mnemonicParsing="false" onAction="#searchPage2" prefHeight="98.0" prefWidth="222.0" style="-fx-background-color: #8EFFA8;" text=" Teams" textFill="#7a6bbc">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/Group_fill.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="stat" mnemonicParsing="false" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="View Statistics" textFill="#7a6bbc">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/Waterfall.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="projects" mnemonicParsing="false" onAction="#projectsPage" prefHeight="88.0" prefWidth="229.0" style="-fx-background-color: #8EFFA8;" text="  Projects" textFill="#7a6bbc">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/Arhives_alt_light.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="members" mnemonicParsing="false" onAction="#searchPage" prefHeight="88.0" prefWidth="229.0" style="-fx-background-color: #8EFFA8;" text="Members" textFill="#7a6bbc">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/User_circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="setting" mnemonicParsing="false" onAction="#settingPage" prefHeight="88.0" prefWidth="229.0" style="-fx-background-color: #8EFFA8;" text="  Setting" textFill="#7a6bbc">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/Setting_fill.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="ProjectNameInput" layoutX="226.0" layoutY="-1.0" prefHeight="471.0" prefWidth="489.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="nameInput" layoutX="140.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="Project Name..." />
+            <Label layoutX="51.0" layoutY="121.0" prefHeight="19.0" prefWidth="84.0" text="Project Name" textFill="#7a6bbc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Pane layoutY="-5.0" prefHeight="83.0" prefWidth="489.0" style="-fx-background-color: #8EFFA8;">
+               <children>
+                  <Button fx:id="logout" layoutX="447.0" layoutY="8.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: #8EFFA8;" textFill="#7a6bbc">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/Sign_out_squre_fill.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addProjectPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/Add_round_fill.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/close_ring.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#searchPage2" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/Search_duotone_line.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteTeam" layoutX="177.0" layoutY="174.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="84.0" text="Delete" textFill="#7a6bbc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="wronginput" layoutX="200.0" layoutY="253.0" textFill="#ff0606" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

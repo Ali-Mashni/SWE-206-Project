@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminPage">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminPage">
    <children>
       <Button fx:id="logout" layoutX="658.0" layoutY="7.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: white;" textFill="#7a6bbc">
          <graphic>
@@ -42,7 +42,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="stat" mnemonicParsing="false" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="View Statistics" textFill="#7a6bbc">
+            <Button fx:id="stat" mnemonicParsing="false" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="Machines" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -54,7 +54,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="projects" mnemonicParsing="false" prefHeight="88.0" prefWidth="229.0" style="-fx-background-color: #8EFFA8;" text="  Projects" textFill="#7a6bbc">
+            <Button fx:id="projects" mnemonicParsing="false" onAction="#projectsPage" prefHeight="88.0" prefWidth="229.0" style="-fx-background-color: #8EFFA8;" text="  Projects" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
