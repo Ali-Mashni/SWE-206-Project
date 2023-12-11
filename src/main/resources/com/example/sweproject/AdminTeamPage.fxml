@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminTeamsPage">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminTeamsPage">
    <children>
       <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="471.0" prefWidth="227.0" style="-fx-background-color: #8EFFA8;">
          <children>
@@ -89,16 +89,7 @@
       </VBox>
       <Pane layoutX="225.0" layoutY="-1.0" prefHeight="470.0" prefWidth="480.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="logout" layoutX="432.0" layoutY="2.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: white;" textFill="#7a6bbc">
-               <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../image/Sign_out_squre_fill.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <TableView fx:id="teamsTable" layoutX="1.0" layoutY="112.0" prefHeight="304.0" prefWidth="479.0">
+            <TableView fx:id="teamsTable" layoutX="1.0" layoutY="133.0" prefHeight="304.0" prefWidth="479.0">
               <columns>
                 <TableColumn fx:id="teamNameColumn" prefWidth="73.94577026367188" text="Name" />
                 <TableColumn fx:id="assignedProjectColumn" prefWidth="123.30783081054688" text="Assigned Project" />
@@ -106,13 +97,65 @@
                   <TableColumn fx:id="machinesColumn" prefWidth="159.42269897460938" text="Machines" />
               </columns>
             </TableView>
-            <TextField fx:id="searchbar" layoutX="83.0" layoutY="71.0" prefHeight="24.0" prefWidth="374.0" promptText="Enter team name..." />
-            <Label layoutX="14.0" layoutY="74.0" prefHeight="17.0" prefWidth="69.0" text="Team Name" textFill="#7a6bbc">
+            <TextField fx:id="searchbar" layoutX="100.0" layoutY="101.0" prefHeight="24.0" prefWidth="374.0" promptText="Enter team name..." />
+            <Label layoutX="14.0" layoutY="105.0" prefHeight="17.0" prefWidth="69.0" text="Team Name" textFill="#7a6bbc">
                <font>
-                  <Font name="System Bold" size="13.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="search" layoutX="409.0" layoutY="422.0" mnemonicParsing="false" onAction="#search" text="Search" />
+            <Button fx:id="search" layoutX="211.0" layoutY="443.0" mnemonicParsing="false" onAction="#search" text="Search" textFill="#7a6bbc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Pane layoutX="-9.0" prefHeight="83.0" prefWidth="489.0" style="-fx-background-color: #8EFFA8;">
+               <children>
+                  <Button fx:id="logout" layoutX="447.0" layoutY="8.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: #8EFFA8;" textFill="#7a6bbc">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/Sign_out_squre_fill.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addTeamPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/Add_round_fill.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#deleteTeamPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/close_ring.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SearchPageButton" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/Search_duotone_line.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>

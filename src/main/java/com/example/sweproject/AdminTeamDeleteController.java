@@ -17,23 +17,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class AdminMembersDelete {
+public class AdminTeamDeleteController {
+
     @FXML
     private Button Search;
 
     @FXML
     private Button add;
+
     @FXML
     private Button delete;
-    @FXML
-    private Button deleteMember;
 
     @FXML
-    private TextField enterusername;
+    private Button deleteTeam;
 
+    @FXML
+    private TextField enterTeamName;
 
     @FXML
     private Button logout;
+
     @FXML
     private Label wronginput;
 
@@ -51,26 +54,32 @@ public class AdminMembersDelete {
 
     @FXML
     private Button teams;
+
     @FXML
     public void UserPage(ActionEvent event) throws IOException {
-        Stage stage=(Stage) logout.getScene().getWindow();
-        changeScene(stage,"UserPage.fxml","userpage");
-
+        Stage stage = (Stage) logout.getScene().getWindow();
+        changeScene(stage, "UserPage.fxml", "userpage");
     }
-    public void addMemberPage(ActionEvent event){
-        Stage stage=(Stage) add.getScene().getWindow();
-        changeScene(stage,"AdminMembersAdd.fxml","userpage");
-    }    @FXML
-    public void searchPage(ActionEvent event) throws IOException {
-        Stage stage=(Stage) Search.getScene().getWindow();
-        changeScene(stage,"AdminMembersPage.fxml","SearchPage");
 
+    @FXML
+    public void addTeamPage(ActionEvent event) {
+        Stage stage = (Stage) add.getScene().getWindow();
+        changeScene(stage, "AdminTeamAdd.fxml", "Add Team");
+    }
+    public void searchPage(ActionEvent event) throws IOException{
+        Stage stage=(Stage) members.getScene().getWindow();
+        changeScene(stage,"AdminMembersPage.fxml","Settings");
     }
     @FXML
-    public void settingPage(ActionEvent event) throws IOException {
-        Stage stage=(Stage) setting.getScene().getWindow();
-        changeScene(stage,"AdminSettings.fxml","Settings");
+    public void searchPage2(ActionEvent event) throws IOException {
+        Stage stage = (Stage) Search.getScene().getWindow();
+        changeScene(stage, "AdminTeamPage.fxml", "Teams Page");
+    }
 
+    @FXML
+    public void settingPage(ActionEvent event) throws IOException {
+        Stage stage = (Stage) setting.getScene().getWindow();
+        changeScene(stage, "AdminSettings.fxml", "Settings");
     }
 
     private void changeScene(Stage stage, String fxml, String title) {
@@ -83,33 +92,34 @@ public class AdminMembersDelete {
             e.printStackTrace();
         }
     }
-    public void delete(ActionEvent event) {
-        Stage stage = (Stage) delete.getScene().getWindow(); // Get the reference to the current stage
 
-        File file = new File("./src/main/java/com/example/sweproject/User.txt");
+    public void delete(ActionEvent event) {
+        Stage stage = (Stage) deleteTeam.getScene().getWindow(); // Get the reference to the current stage
+
+        File file = new File("./src/main/java/com/example/sweproject/Teams.txt");
 
         try {
             // Read existing lines from the file
             List<String> lines = new ArrayList<>();
-            boolean userFound = false;
-            String deleteUsername=enterusername.getText();
+            boolean teamFound = false;
+            String deleteTeamName = enterTeamName.getText();
 
-            try (Scanner users = new Scanner(file)) {
-                while (users.hasNextLine()) {
-                    String line = users.nextLine();
-                    String[] user = line.split(";");
-                    String storedUsername = user[2];
+            try (Scanner teams = new Scanner(file)) {
+                while (teams.hasNextLine()) {
+                    String line = teams.nextLine();
+                    String[] team = line.split(";");
+                    String storedTeamName = team[0];
 
-                    if (deleteUsername.equals(storedUsername)) {
-                        userFound = true;
+                    if (deleteTeamName.equals(storedTeamName)) {
+                        teamFound = true;
                     } else {
                         lines.add(line);
                     }
                 }
             }
 
-            if (!userFound) {
-                wronginput.setText("Username not found");
+            if (!teamFound) {
+                wronginput.setText("Team not found");
                 wronginput.setTextFill(Paint.valueOf("red"));
                 return;
             }
@@ -121,17 +131,12 @@ public class AdminMembersDelete {
                 }
             }
 
-            wronginput.setText("User deleted successfully");
+            wronginput.setText("Team deleted successfully");
             wronginput.setTextFill(Paint.valueOf("green"));
 
         } catch (IOException e) {
             System.out.println(e);
         }
     }
-    @FXML
-    public void searchPage2(ActionEvent event) throws IOException {
-        Stage stage=(Stage) teams.getScene().getWindow();
-        changeScene(stage,"AdminTeamPage.fxml","Teams Page");
-
-    }
 }
+

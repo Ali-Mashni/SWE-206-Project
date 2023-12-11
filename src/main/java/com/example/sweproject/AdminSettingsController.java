@@ -58,4 +58,10 @@ public class AdminSettingsController {
         Stage stage=(Stage) members.getScene().getWindow();
         changeScene(stage,"AdminMembersPage.fxml","Settings");
     }
+    @FXML
+    public void searchPage2(ActionEvent event) throws IOException {
+        Stage stage=(Stage) teams.getScene().getWindow();
+        changeScene(stage,"AdminTeamPage.fxml","Teams Page");
+
+    }
 }

@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -14,12 +15,10 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.net.URL;
+import java.util.*;
 
-public class AdminTeamsPage {
+public class AdminTeamsPage implements Initializable {
     @FXML
     private TableView<Team> teamsTable;
 
@@ -32,8 +31,7 @@ public class AdminTeamsPage {
     private TableColumn<Team, String> teamLeaderColumn;
     @FXML
     private TableColumn<Team, String> machinesColumn;
-    @FXML
-    private Button submit;
+
     @FXML
     private TextField searchbar;
 
@@ -50,7 +48,28 @@ public class AdminTeamsPage {
     private Button stat;
     @FXML
     private Button members;
+    @FXML
+    private Button delete;
+    @FXML
+    private Button add;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            search(new ActionEvent());
+        }catch (IOException e){
 
+        }
+    }
+    public void addTeamPage(ActionEvent event){
+        Stage stage=(Stage) add.getScene().getWindow();
+        changeScene(stage,"AdminTeamAdd.fxml","Add Team Page");
+    }
+    @FXML
+    public void deleteTeamPage(ActionEvent event) throws IOException {
+        Stage stage=(Stage) delete.getScene().getWindow();
+        changeScene(stage,"AdminTeamDelete.fxml","Delete Team Page");
+
+    }
     public void search(ActionEvent event) throws IOException {
         String searchText = searchbar.getText().toLowerCase(); // Convert to lowercase for case-insensitive search
         ObservableList<Team> matchingTeam = FXCollections.observableArrayList();

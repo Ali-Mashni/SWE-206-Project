@@ -26,4 +26,8 @@ public class Member extends User{
     public String getResearchInterests() {
         return researchInterests;
     }
+    public ArrayList<Team> getTeamsInvolved() {
+        return teamsInvolved;
+    }
+
 }

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminMembersDelete">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminTeamAddPageController">
    <children>
       <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="471.0" prefWidth="227.0" style="-fx-background-color: #8EFFA8;">
          <children>
@@ -59,7 +59,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="members" mnemonicParsing="false" onAction="#searchPage" prefHeight="88.0" prefWidth="229.0" style="-fx-background-color: #8EFFA8;" text="Members" textFill="#7a6bbc">
+            <Button fx:id="members" mnemonicParsing="false" onAction="#memberPage" prefHeight="88.0" prefWidth="229.0" style="-fx-background-color: #8EFFA8;" text="Members" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -87,8 +87,8 @@
       </VBox>
       <Pane layoutX="226.0" layoutY="-1.0" prefHeight="471.0" prefWidth="489.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="enterusername" layoutX="136.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="Member username...." />
-            <Label layoutX="51.0" layoutY="121.0" prefHeight="17.0" prefWidth="69.0" text="Username:" textFill="#7a6bbc">
+            <TextField fx:id="teamName" layoutX="136.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="Team Name..." />
+            <Label layoutX="24.0" layoutY="121.0" prefHeight="19.0" prefWidth="84.0" text="Team Name" textFill="#7a6bbc">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -104,7 +104,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addMemberPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -116,7 +116,7 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#addMemberPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
+                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#deletePage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -130,7 +130,7 @@
                   </Button>
                </children>
             </Pane>
-            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#searchPage" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
+            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#searchPage2" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -142,12 +142,30 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="DeleteMember" layoutX="177.0" layoutY="174.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="84.0" text="Delete" textFill="#7a6bbc">
+            <Label layoutX="24.0" layoutY="167.0" prefHeight="19.0" prefWidth="112.0" text="Assigned Project" textFill="#7a6bbc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="assignedProject" layoutX="136.0" layoutY="164.0" prefHeight="25.0" prefWidth="209.0" promptText="Assigned Project....." />
+            <Label layoutX="19.0" layoutY="217.0" prefHeight="19.0" prefWidth="123.0" text="Team Members" textFill="#7a6bbc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TeamMembers" layoutX="136.0" layoutY="214.0" prefHeight="25.0" prefWidth="209.0" promptText="Leader,m1,m2,m3...." />
+            <Button fx:id="addTeam" layoutX="172.0" layoutY="298.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="84.0" text="Add" textFill="#7a6bbc">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Label fx:id="wronginput" layoutX="200.0" layoutY="253.0" textFill="#ff0606" />
+            <Label fx:id="wronginput" layoutX="129.0" layoutY="342.0" prefHeight="17.0" prefWidth="188.0" textFill="#ff0606" />
+            <Label layoutX="19.0" layoutY="262.0" prefHeight="19.0" prefWidth="123.0" text="Team Michines" textFill="#7a6bbc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="machines" layoutX="136.0" layoutY="259.0" prefHeight="25.0" prefWidth="209.0" promptText="M1,M2,M3...." />
          </children>
       </Pane>
    </children>

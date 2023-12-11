@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminMembersDelete">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminTeamDeleteController">
    <children>
       <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="471.0" prefWidth="227.0" style="-fx-background-color: #8EFFA8;">
          <children>
@@ -87,8 +87,8 @@
       </VBox>
       <Pane layoutX="226.0" layoutY="-1.0" prefHeight="471.0" prefWidth="489.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="enterusername" layoutX="136.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="Member username...." />
-            <Label layoutX="51.0" layoutY="121.0" prefHeight="17.0" prefWidth="69.0" text="Username:" textFill="#7a6bbc">
+            <TextField fx:id="enterTeamName" layoutX="140.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="Member username...." />
+            <Label layoutX="51.0" layoutY="121.0" prefHeight="19.0" prefWidth="84.0" text="Team Name" textFill="#7a6bbc">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -104,7 +104,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addMemberPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addTeamPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -116,7 +116,7 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#addMemberPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
+                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -130,7 +130,7 @@
                   </Button>
                </children>
             </Pane>
-            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#searchPage" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
+            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#searchPage2" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -142,7 +142,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="DeleteMember" layoutX="177.0" layoutY="174.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="84.0" text="Delete" textFill="#7a6bbc">
+            <Button fx:id="deleteTeam" layoutX="177.0" layoutY="174.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="84.0" text="Delete" textFill="#7a6bbc">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

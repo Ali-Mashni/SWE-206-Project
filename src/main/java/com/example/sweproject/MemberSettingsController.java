@@ -1,23 +1,42 @@
 package com.example.sweproject;
-
+import com.example.sweproject.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MemberPage {
+public class MemberSettingsController {
     @FXML
     private Button logout;
-    @FXML
-    private Button settings;
+
     @FXML
     private Button myTeams;
     @FXML
     private Button stat;
+    @FXML
+    private Button settings;
 
+
+    @FXML
+    private Label usertext;
+    @FXML
+    private Label roletext;
+    @FXML
+    private Label passwordtext;
+
+    public void initialize() {
+        // Perform initial setup here, e.g., set labels based on user information
+        User loggedInUser = Login.getLoggedInUser();
+        usertext.setText(loggedInUser.getUsername());
+        passwordtext.setText(loggedInUser.getPassword()); // Replace with the actual password
+        roletext.setText(loggedInUser.getRole());
+    }
 
     public void UserPage(ActionEvent event) throws IOException {
         Stage stage=(Stage) logout.getScene().getWindow();
@@ -34,12 +53,13 @@ public class MemberPage {
             e.printStackTrace();
         }
     }
-    public void settingPage(ActionEvent event) throws IOException {
-        Stage stage=(Stage) settings.getScene().getWindow();
-        changeScene(stage,"MemberSettings.fxml","Settings");
-    }
+
     public void myTeamsPage(ActionEvent event) throws IOException {
         Stage stage=(Stage) myTeams.getScene().getWindow();
         changeScene(stage,"myTeamsPage.fxml","my teams");
     }
+//    public void memberPage(ActionEvent event) throws IOException{
+//        Stage stage=(Stage) members.getScene().getWindow();
+//        changeScene(stage,"AdminMembersPage.fxml","Settings");
+//    }
 }

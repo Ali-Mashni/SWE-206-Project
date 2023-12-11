@@ -23,7 +23,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Button fx:id="teams" mnemonicParsing="false" prefHeight="98.0" prefWidth="222.0" style="-fx-background-color: #8EFFA8;" text=" Teams" textFill="#7a6bbc">
+            <Button fx:id="teams" mnemonicParsing="false" onAction="#searchPage2" prefHeight="98.0" prefWidth="222.0" style="-fx-background-color: #8EFFA8;" text=" Teams" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
