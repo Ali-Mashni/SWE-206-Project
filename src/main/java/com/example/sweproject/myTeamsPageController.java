@@ -25,22 +25,15 @@ public class myTeamsPageController implements Initializable {
     @FXML
     private Button settings;
     @FXML
-    Button currentTeam;
+    private Button reserveMachine;
+    @FXML
+    Button teamsInfo;
     @FXML
     private ListView<String> teams;
-
-    private String s;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         teams.getItems().addAll(getTeamsInvolved());
-        teams.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                String selectedTeam = teams.getSelectionModel().getSelectedItem();
-                currentTeam.setText("show " + selectedTeam+ " information");
-            }
-        });
     }
     public ArrayList<String> getTeamsInvolved() {
         User loggedInUser = Login.getLoggedInUser();
@@ -72,15 +65,20 @@ public class myTeamsPageController implements Initializable {
         changeScene(stage,"MemberSettings.fxml","Settings");
     }
     public void TeamInfoPage(ActionEvent event) throws IOException {
-        Stage stage=(Stage) currentTeam.getScene().getWindow();
-        changeScene(stage,"MemberSettings.fxml","Settings");
+        Stage stage=(Stage) teamsInfo.getScene().getWindow();
+        changeScene(stage,"TeamInfoPage.fxml","Teams info");
     }
-
+    public void resereveMachinePage(ActionEvent event) throws IOException {
+        Stage stage=(Stage) reserveMachine.getScene().getWindow();
+        changeScene(stage,"ReserveMachinePage.fxml","Reserve machine");
+    }
+    public void statPage(ActionEvent event) throws IOException {
+        Stage stage = (Stage) stat.getScene().getWindow();
+        changeScene(stage, "statisticsPage.fxml", "statistics");
+    }
     public ListView<String> getTeams() {
         return teams;
     }
-    public String selectedTeam(){
-        return currentTeam.getText();
-    }
+
 }
 

@@ -35,7 +35,7 @@
                         <Font name="System Bold" size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="stat" mnemonicParsing="false" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="View Statistics" textFill="#7a6bbc">
+                <Button fx:id="stat" mnemonicParsing="false" onAction="#statPage" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="View Statistics" textFill="#7a6bbc">
                     <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                             <image>

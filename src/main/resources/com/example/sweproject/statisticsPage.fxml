@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.TeamInfoPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.StatisticsPage">
     <children>
         <Button fx:id="logout" layoutX="658.0" layoutY="7.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: white;" textFill="#7a6bbc">
             <graphic>
@@ -44,7 +43,7 @@
                         <Font name="System Bold" size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="stat" mnemonicParsing="false" onAction="#statPage" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="View Statistics" textFill="#7a6bbc">
+                <Button mnemonicParsing="false" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="View Statistics" textFill="#7a6bbc">
                     <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -70,32 +69,26 @@
                 </Button>
             </children>
         </VBox>
-      <Text fx:id="teamName" fill="#7a6bbc" layoutX="243.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.6405944824219">
+      <Text fx:id="mostActiveMemberText" fill="#7a6bbc" layoutX="248.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="309.3367004394531">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Text fx:id="assignedProjects" fill="#7a6bbc" layoutX="243.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="379.2945251464844">
+      <Text fx:id="mostUsedMachinesText" fill="#7a6bbc" layoutX="248.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.9366760253906">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Text fx:id="teamLeader" fill="#7a6bbc" layoutX="243.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.6405944824219">
+      <Text fx:id="memberInvolvedInMostProjectsText" fill="#7a6bbc" layoutX="248.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="438.9366149902344">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Text fx:id="members" fill="#7a6bbc" layoutX="243.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.6405944824219">
+      <Text fx:id="mostTimeReserved" fill="#7a6bbc" layoutX="248.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.33673095703125">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Text fx:id="teamMachines" fill="#7a6bbc" layoutX="243.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="283.7366638183594">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Text>
-      <TextField fx:id="selectedTeam" layoutX="262.0" layoutY="377.0" prefHeight="34.0" prefWidth="167.0" promptText="Enter team name:" />
-      <Button fx:id="search" layoutX="433.0" layoutY="377.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="34.0" prefWidth="64.0" style="-fx-background-color: #7a6bbc;" text="search" textFill="WHITE" />
+      <Button fx:id="showInfo" layoutX="353.0" layoutY="325.0" mnemonicParsing="false" onAction="#stat" prefHeight="69.0" prefWidth="174.0" style="-fx-background-color: #7a6bbc;" text="Show Statistics" textFill="#fffefe" />
     </children>
 </AnchorPane>

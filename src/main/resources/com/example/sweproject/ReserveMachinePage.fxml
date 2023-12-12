@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.TeamInfoPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.ReserveMachinePage">
     <children>
         <Button fx:id="logout" layoutX="658.0" layoutY="7.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: white;" textFill="#7a6bbc">
             <graphic>
@@ -70,32 +70,20 @@
                 </Button>
             </children>
         </VBox>
-      <Text fx:id="teamName" fill="#7a6bbc" layoutX="243.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.6405944824219">
+      <TextField fx:id="selectedTeam" layoutX="247.0" layoutY="97.0" prefHeight="34.0" prefWidth="165.0" promptText="Enter team name to reserve:" />
+      <Button fx:id="reserveMachine" layoutX="349.0" layoutY="290.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="34.0" prefWidth="128.0" style="-fx-background-color: #7a6bbc;" text="Reserve Machine" textFill="WHITE" />
+      <Text fx:id="message" fill="#7a6bbc" layoutX="299.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="278.9366149902344">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="day" layoutX="247.0" layoutY="148.0" prefHeight="34.0" prefWidth="159.0" promptText="Enter day:" />
+      <TextField fx:id="startDateLabel" layoutX="247.0" layoutY="189.0" prefHeight="27.0" prefWidth="191.0" promptText="Enter start hour in 24 h system:" />
+      <TextField fx:id="endDateLabel" layoutX="247.0" layoutY="233.0" prefHeight="27.0" prefWidth="191.0" promptText="Enter end hour in 24 h system:" />
+      <Text fx:id="reservedMachine" fill="#7a6bbc" layoutX="245.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="321.5999450683594">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Text fx:id="assignedProjects" fill="#7a6bbc" layoutX="243.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="379.2945251464844">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Text>
-      <Text fx:id="teamLeader" fill="#7a6bbc" layoutX="243.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.6405944824219">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Text>
-      <Text fx:id="members" fill="#7a6bbc" layoutX="243.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.6405944824219">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Text>
-      <Text fx:id="teamMachines" fill="#7a6bbc" layoutX="243.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="283.7366638183594">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Text>
-      <TextField fx:id="selectedTeam" layoutX="262.0" layoutY="377.0" prefHeight="34.0" prefWidth="167.0" promptText="Enter team name:" />
-      <Button fx:id="search" layoutX="433.0" layoutY="377.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="34.0" prefWidth="64.0" style="-fx-background-color: #7a6bbc;" text="search" textFill="WHITE" />
     </children>
 </AnchorPane>

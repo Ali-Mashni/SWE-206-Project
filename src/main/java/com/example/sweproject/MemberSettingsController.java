@@ -53,6 +53,10 @@ public class MemberSettingsController {
             e.printStackTrace();
         }
     }
+    public void statPage(ActionEvent event) throws IOException {
+        Stage stage = (Stage) stat.getScene().getWindow();
+        changeScene(stage, "statisticsPage.fxml", "statistics");
+    }
 
     public void myTeamsPage(ActionEvent event) throws IOException {
         Stage stage=(Stage) myTeams.getScene().getWindow();

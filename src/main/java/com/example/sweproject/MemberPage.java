@@ -42,4 +42,8 @@ public class MemberPage {
         Stage stage=(Stage) myTeams.getScene().getWindow();
         changeScene(stage,"myTeamsPage.fxml","my teams");
     }
+    public void statPage(ActionEvent event) throws IOException {
+        Stage stage = (Stage) stat.getScene().getWindow();
+        changeScene(stage, "statisticsPage.fxml", "statistics");
+    }
 }
