@@ -134,4 +134,15 @@ public class AdminMembersDelete {
         changeScene(stage,"AdminTeamPage.fxml","Teams Page");
 
     }
+    @FXML
+    public void MachinePage(ActionEvent event) throws IOException {
+        Stage stage=(Stage) stat.getScene().getWindow();
+        changeScene(stage,"AdminMachinePage.fxml","Machine Page");
+
+    }
+    public void projectsPage(ActionEvent event) throws IOException {
+        Stage stage=(Stage) projects.getScene().getWindow();
+        changeScene(stage,"AdminProjectsPage.fxml","Projects Page");
+
+    }
 }

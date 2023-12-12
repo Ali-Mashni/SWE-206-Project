@@ -1,2 +1,3 @@
-proj1;teamAli;Machine1,Machine2proj2;teamAli;M1
-project 12;team1;Machine23
+proj1;teamAli;mach1,mach2
+project12;Team2;Machine23
+dd;-;vhbg

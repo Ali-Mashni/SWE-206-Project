@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminProjectAddPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminProjectAddPageController">
    <children>
       <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="471.0" prefWidth="227.0" style="-fx-background-color: #8EFFA8;">
          <children>
@@ -35,11 +35,11 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="stat" mnemonicParsing="false" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="View Statistics" textFill="#7a6bbc">
+            <Button fx:id="stat" mnemonicParsing="false" onAction="#MachinePage" prefHeight="94.0" prefWidth="231.0" style="-fx-background-color: #8EFFA8;" text="Machines" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../image/Waterfall.png" />
+                        <Image url="@../../../image/Data_bank.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -130,7 +130,7 @@
                   </Button>
                </children>
             </Pane>
-            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#searchPage2" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
+            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#projectsPage" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>

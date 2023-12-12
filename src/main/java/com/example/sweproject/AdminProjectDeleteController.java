@@ -72,8 +72,9 @@ public class AdminProjectDeleteController {
     }
     @FXML
     public void searchPage2(ActionEvent event) throws IOException {
-        Stage stage = (Stage) Search.getScene().getWindow();
-        changeScene(stage, "AdminProjectsPage.fxml", "Teams Page");
+        Stage stage=(Stage) teams.getScene().getWindow();
+        changeScene(stage,"AdminTeamPage.fxml","Teams Page");
+
     }
 
     @FXML
@@ -143,5 +144,12 @@ public class AdminProjectDeleteController {
         changeScene(stage,"AdminProjectsPage.fxml","Projects Page");
 
     }
+    @FXML
+    public void MachinePage(ActionEvent event) throws IOException {
+        Stage stage=(Stage) stat.getScene().getWindow();
+        changeScene(stage,"AdminMachinePage.fxml","Machine Page");
+
+    }
+
 }
 

@@ -1,17 +1,19 @@
 package com.example.sweproject;
 
+import javafx.beans.property.SimpleStringProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Machine {
-    private String machineID;
-    private String name;
+    private SimpleStringProperty machineID;
+    private SimpleStringProperty name;
     private List<Reservation> usageSchedule;
-    private String suggestedUsage;
+    private SimpleStringProperty suggestedUsage;
 
     // Constructors
 
-    public Machine(String machineID, String name, String suggestedUsage) {
+    public Machine(SimpleStringProperty machineID, SimpleStringProperty name, SimpleStringProperty suggestedUsage) {
         this.machineID = machineID;
         this.name = name;
         this.usageSchedule = new ArrayList<>();
@@ -21,19 +23,19 @@ public class Machine {
     // Getters and Setters
 
     public String getMachineID() {
-        return machineID;
+        return machineID.getValue();
     }
 
     public void setMachineID(String machineID) {
-        this.machineID = machineID;
+        this.machineID = new SimpleStringProperty(machineID);
     }
 
     public String getName() {
-        return name;
+        return name.getValue();
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name =new SimpleStringProperty(name) ;
     }
 
     public List<Reservation> getUsageSchedule() {
@@ -44,11 +46,11 @@ public class Machine {
         this.usageSchedule = usageSchedule;
     }
 
-    public String getSuggestedUsage() {
-        return suggestedUsage;
+    public String  getSuggestedUsage() {
+        return suggestedUsage.getValue();
     }
 
-    public void setSuggestedUsage(String suggestedUsage) {
+    public void setSuggestedUsage(SimpleStringProperty suggestedUsage) {
         this.suggestedUsage = suggestedUsage;
     }
 }

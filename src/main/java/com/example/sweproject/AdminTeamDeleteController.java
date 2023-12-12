@@ -138,5 +138,16 @@ public class AdminTeamDeleteController {
             System.out.println(e);
         }
     }
+    @FXML
+    public void MachinePage(ActionEvent event) throws IOException {
+        Stage stage=(Stage) stat.getScene().getWindow();
+        changeScene(stage,"AdminMachinePage.fxml","Machine Page");
+
+    }
+    public void projectsPage(ActionEvent event) throws IOException {
+        Stage stage=(Stage) teams.getScene().getWindow();
+        changeScene(stage,"AdminProjectsPage.fxml","Projects Page");
+
+    }
 }
 
