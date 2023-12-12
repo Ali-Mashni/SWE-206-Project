@@ -1,2 +1,10 @@
-teamAli;proj1;Ali,M1,M2;mach1,mach2
+teamAli;proj1;Ali,M1,M2;mach1,machine333,mach2
 Team2;project12;nn;Machine23
+Team3;project3;member1,member3,M2;printer,mach1,mach2
+Team4;project4;Ali,member5,member3;printer,mach3,mach75
+Team5;project5;member8,member7,member9;mach21,mach12
+Team6;project6;member15,member4,member6;printer,machine110,mach231
+Team7;project7;Ali,M1,member1;printer,mach132,mach232
+Team8;project8;member13,member3,member2;mach12,mach2
+Team9;project9;member2,M1,M2;mach143,mach221
+Team10;project10;member2,member1;mach100,mach655

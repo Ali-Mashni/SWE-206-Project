@@ -1,3 +1,18 @@
 0;Printer;print documents
-1;mffffg;do stuff do stuff do stuff do stuff do stuff
-2;machine33;do stuff2
+1;mach75;Database management
+2;machine33;Handles specific functions, specialized tasks
+3;mach1;Image editing
+4;mach2;Data analysis
+5;mach3;Code compilation
+6;mach21;Data processing
+7;mach12;Graphic design
+8;machine110;3D rendering
+9;mach231;Data encryption
+10;mach132;Document analysis
+11;mach232;Data visualization
+12;mach143;Algorithm development
+13;mach221;Simulation modeling
+14;mach100;Video editing
+15;mach655;Machine learning training
+16;Machine23; do stuff33
+34;machine333;do something

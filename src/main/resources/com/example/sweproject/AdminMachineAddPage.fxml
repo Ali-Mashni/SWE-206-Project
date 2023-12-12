@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminProjectAddPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="706.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweproject.AdminMachineAdd">
    <children>
       <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="471.0" prefWidth="227.0" style="-fx-background-color: #8EFFA8;">
          <children>
@@ -85,30 +85,58 @@
             </Button>
          </children>
       </VBox>
-      <Pane layoutX="226.0" layoutY="-1.0" prefHeight="471.0" prefWidth="489.0" style="-fx-background-color: white;">
+      <Pane layoutX="226.0" layoutY="-1.0" prefHeight="470.0" prefWidth="480.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="projectName" layoutX="136.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="Project Name..." />
-            <Label layoutX="24.0" layoutY="121.0" prefHeight="19.0" prefWidth="84.0" text="Project Name" textFill="#7a6bbc">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Pane layoutY="-5.0" prefHeight="83.0" prefWidth="489.0" style="-fx-background-color: #8EFFA8;">
+            <Pane layoutX="-9.0" prefHeight="471.0" prefWidth="489.0" style="-fx-background-color: white;">
                <children>
-                  <Button fx:id="logout" layoutX="447.0" layoutY="8.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: #8EFFA8;" textFill="#7a6bbc">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/Sign_out_squre_fill.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                  <TextField fx:id="machineIDText" layoutX="136.0" layoutY="118.0" prefHeight="25.0" prefWidth="209.0" promptText="Machine ID...." />
+                  <Label layoutX="24.0" layoutY="121.0" prefHeight="19.0" prefWidth="84.0" text="Machine ID" textFill="#7a6bbc">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutY="-5.0" prefHeight="83.0" prefWidth="489.0" style="-fx-background-color: #8EFFA8;">
+                     <children>
+                        <Button fx:id="logout1" layoutX="447.0" layoutY="8.0" mnemonicParsing="false" onAction="#UserPage" prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: #8EFFA8;" textFill="#7a6bbc">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/Sign_out_squre_fill.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/Add_round_fill.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#deletePage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/close_ring.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#MachinePage" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/Add_round_fill.png" />
+                              <Image url="@../../../image/Search_duotone_line.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -116,44 +144,26 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#deletePage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
-                     <graphic>
-                        <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/close_ring.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                  <Label layoutX="24.0" layoutY="167.0" prefHeight="19.0" prefWidth="112.0" text="Machine Name" textFill="#7a6bbc">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="machineNameText" layoutX="136.0" layoutY="164.0" prefHeight="25.0" prefWidth="209.0" promptText="Machine Name..." />
+                  <Button fx:id="addMachine" layoutX="174.0" layoutY="259.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="84.0" text="Add" textFill="#7a6bbc">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Button>
+                  <Label fx:id="wronginput" layoutX="129.0" layoutY="314.0" prefHeight="17.0" prefWidth="188.0" textFill="#ff0606" />
+                  <Label layoutX="24.0" layoutY="209.0" prefHeight="19.0" prefWidth="112.0" text="Suggested Usage" textFill="#7a6bbc">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="suggestedUsageText" layoutX="136.0" layoutY="206.0" prefHeight="25.0" prefWidth="209.0" promptText="suggested usage....." />
                </children>
             </Pane>
-            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" onAction="#projectsPage" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
-               <graphic>
-                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../image/Search_duotone_line.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Button>
-            <Label layoutX="24.0" layoutY="167.0" prefHeight="19.0" prefWidth="112.0" text="Assigned Team" textFill="#7a6bbc">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="assignedTeam" layoutX="136.0" layoutY="164.0" prefHeight="25.0" prefWidth="209.0" promptText="Assigned Team....." />
-            <Button fx:id="addTeam" layoutX="181.0" layoutY="209.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="84.0" text="Add" textFill="#7a6bbc">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Button>
-            <Label fx:id="wronginput" layoutX="129.0" layoutY="279.0" prefHeight="17.0" prefWidth="188.0" textFill="#ff0606" />
          </children>
       </Pane>
    </children>

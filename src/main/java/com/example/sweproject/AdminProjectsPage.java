@@ -98,9 +98,7 @@ public class AdminProjectsPage implements Initializable {
         assignedTeamColumn.setCellValueFactory(
                 new PropertyValueFactory<Project,String>("assignedTeam")
         );
-        machinesColumn.setCellValueFactory(
-                new PropertyValueFactory<Project,String>("machinesNames")
-        );
+
         // Set the matching users to the table
         projectsTable.setItems(matchingTeam);
     }

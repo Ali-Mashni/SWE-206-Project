@@ -1,3 +1,10 @@
 proj1;teamAli;mach1,mach2
 project12;Team2;Machine23
-dd;-;vhbg
+project3;Team3;member1,member3,M2;printer,mach1,mach2
+project4;Team4;Ali,member5,member3;printer,mach3,mach75
+project5;Team5;member8,member7,member9;mach21,mach12
+project6;Team6;member15,member4,member6;printer,machine110,mach231
+project7;Team7;Ali,M1,member1;printer,mach132,mach232
+project8;Team8;member13,member3,member2;mach12,mach2
+project9;Team9;member2,M1,M2;mach143,mach221
+project10;Team10;member12,member1;mach100,mach655

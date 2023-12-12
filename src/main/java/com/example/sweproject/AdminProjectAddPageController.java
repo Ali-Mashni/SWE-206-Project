@@ -88,10 +88,10 @@ public class AdminProjectAddPageController {
         try (Scanner projects = new Scanner(file); PrintWriter write = new PrintWriter(new FileWriter(file, true))) {
             String newProjectName = projectName.getText();
             String newAssignedTeam = assignedTeam.getText();
-            String newMachines = machines.getText();
+
 
             // Check if the fields are empty
-            if (newProjectName.isEmpty() || newAssignedTeam.isEmpty()  || newMachines.isEmpty()) {
+            if (newProjectName.isEmpty() || newAssignedTeam.isEmpty() ) {
                 wronginput.setText("All fields should be entered");
                 return;
             }
@@ -109,7 +109,7 @@ public class AdminProjectAddPageController {
             }
 
             // If all conditions are satisfied, add the new project to the file
-            write.println(newProjectName + ";" + newAssignedTeam + ";" + newMachines);
+            write.println(newProjectName + ";" + newAssignedTeam) ;
 
             wronginput.setText("Team added successfully");
             wronginput.setTextFill(Paint.valueOf("green"));
