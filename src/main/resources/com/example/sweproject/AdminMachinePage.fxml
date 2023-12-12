@@ -118,7 +118,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addMachinePage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addMachinePage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Machine Add" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -127,10 +127,10 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#deleteMachinePage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
+                  <Button fx:id="delete" layoutX="308.0" layoutY="3.0" mnemonicParsing="false" onAction="#deleteMachinePage" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Machine Delete" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -139,10 +139,10 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="SearchPageButton" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
+                  <Button fx:id="SearchPageButton" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Machine Search" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -151,7 +151,7 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
                </children>

@@ -113,7 +113,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addMemberPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Add" textFill="#7a6bbc">
+                  <Button fx:id="add" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" onAction="#addMemberPage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Member Add" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -122,10 +122,10 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="delete" layoutX="323.0" layoutY="3.0" mnemonicParsing="false" onAction="#deletePage" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #8EFFA8;" text="Delete" textFill="#7a6bbc">
+                  <Button fx:id="delete" layoutX="317.0" layoutY="3.0" mnemonicParsing="false" onAction="#deletePage" prefHeight="76.0" prefWidth="141.0" style="-fx-background-color: #8EFFA8;" text="Member Delete" textFill="#7a6bbc">
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -134,12 +134,12 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
                </children>
             </Pane>
-            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Search" textFill="#7a6bbc">
+            <Button fx:id="Search" layoutY="1.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="150.0" style="-fx-background-color: #8EFFA8;" text="Member Search" textFill="#7a6bbc">
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -148,10 +148,13 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font name="System Bold" size="13.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="submit" layoutX="377.0" layoutY="422.0" mnemonicParsing="false" onAction="#submit" text="subbmit" />
+            <Button fx:id="submit" layoutX="210.0" layoutY="407.0" mnemonicParsing="false" onAction="#submit" text="subbmit" textFill="#7a6bbc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
          </children>
       </Pane>
    </children>
