@@ -113,6 +113,8 @@ public class AdminProjectDeleteController {
 
                     if (deleteProjectName.equals(storedProjectName)) {
                         projectFound = true;
+                        File file1=new File("./src/main/java/com/example/sweproject/Teams.txt");
+                        removeWordFromFile(file1,storedProjectName);
                     } else {
                         lines.add(line);
                     }
@@ -149,6 +151,44 @@ public class AdminProjectDeleteController {
         Stage stage=(Stage) stat.getScene().getWindow();
         changeScene(stage,"AdminMachinePage.fxml","Machine Page");
 
+    }
+    private static void removeWordFromFile(File file, String wordToRemove) {
+        try {
+            // Read existing lines from the file
+            StringBuilder content = new StringBuilder();
+            boolean wordFound = false;
+
+            try (Scanner scanner = new Scanner(file)) {
+                while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
+                    // Replace the word in the line
+                    String updatedLine = line.replaceAll("\\b" + wordToRemove + "\\b,?", "").replaceAll(",{2,}", ",").replaceAll(",$", "");
+
+
+                    // Check if the word was found in this line
+                    if (!line.equals(updatedLine)) {
+                        wordFound = true;
+                    }
+                    // Append the updated line to the content
+                    content.append(updatedLine).append("\n");
+                }
+            }
+
+            if (!wordFound) {
+//                System.out.println("Word '" + wordToRemove + "' not found in the file");
+                return;
+            }
+
+            // Write the updated content back to the file
+            try (PrintWriter writer = new PrintWriter(new FileWriter(file, false))) {
+                writer.print(content.toString());
+            }
+
+//            System.out.println("Word '" + wordToRemove + "' removed successfully from the file");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
